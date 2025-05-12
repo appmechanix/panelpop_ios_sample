@@ -9,9 +9,6 @@ import PanelPop
 import SwiftUI
 
 struct ContentView: View {
-    let panelPop = PanelPop.Initialize("pp1_c60b3357323d5c882525507c5015733a02c5a9d529f10bea3c10627356f9")
-    @State private var loadedPanel: PanelPopPanel? = nil
-    
     @State var showPanel = false
 
     var body: some View {
@@ -20,7 +17,7 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
-            
+
             Button {
                 showPanel.toggle()
             } label: {
@@ -33,22 +30,21 @@ struct ContentView: View {
         }
         .padding()
         .popover(isPresented: $showPanel) {
-            Group {
-                if let panel = loadedPanel {
-                    PanelPopView(panel)
-                } else {
-                    ProgressView("Loading...")
-                }
-            }
-            .task {
-                if loadedPanel == nil {  // avoid reloading if it's already loaded
-                    loadedPanel = await panelPop.ShowPopup("demo_panel")
-                }
-            }
+            PanelPopView("demo_panel")
         }
     }
 }
 
+struct ContentPreviewWrapper: View {
+    init() {
+        PanelPop.initialize("pp1_c60b3357323d5c882525507c5015733a02c5a9d529f10bea3c10627356f9")
+    }
+    
+    var body: some View {
+        ContentView()
+    }
+}
+
 #Preview {
-    ContentView()
+    ContentPreviewWrapper()
 }

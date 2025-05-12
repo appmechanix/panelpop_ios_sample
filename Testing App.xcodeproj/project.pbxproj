@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		65ADE32B2DCDC2B400FF0156 /* PanelPop in Frameworks */ = {isa = PBXBuildFile; productRef = 65ADE32A2DCDC2B400FF0156 /* PanelPop */; };
+		6567F1392DD19119003F5922 /* PanelPop in Frameworks */ = {isa = PBXBuildFile; productRef = 6567F1382DD19119003F5922 /* PanelPop */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65ADE32B2DCDC2B400FF0156 /* PanelPop in Frameworks */,
+				6567F1392DD19119003F5922 /* PanelPop in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +70,7 @@
 			);
 			name = "Testing App";
 			packageProductDependencies = (
-				65ADE32A2DCDC2B400FF0156 /* PanelPop */,
+				6567F1382DD19119003F5922 /* PanelPop */,
 			);
 			productName = "Testing App";
 			productReference = 65ADE31B2DCDC29C00FF0156 /* Testing App.app */;
@@ -101,7 +101,7 @@
 			mainGroup = 65ADE3122DCDC29C00FF0156;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				65ADE3292DCDC2B400FF0156 /* XCRemoteSwiftPackageReference "panelpop_ios" */,
+				6567F1372DD19119003F5922 /* XCRemoteSwiftPackageReference "panelpop_ios" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 65ADE31C2DCDC29C00FF0156 /* Products */;
@@ -335,7 +335,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		65ADE3292DCDC2B400FF0156 /* XCRemoteSwiftPackageReference "panelpop_ios" */ = {
+		6567F1372DD19119003F5922 /* XCRemoteSwiftPackageReference "panelpop_ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/appmechanix/panelpop_ios";
 			requirement = {
@@ -346,9 +346,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		65ADE32A2DCDC2B400FF0156 /* PanelPop */ = {
+		6567F1382DD19119003F5922 /* PanelPop */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 65ADE3292DCDC2B400FF0156 /* XCRemoteSwiftPackageReference "panelpop_ios" */;
+			package = 6567F1372DD19119003F5922 /* XCRemoteSwiftPackageReference "panelpop_ios" */;
 			productName = PanelPop;
 		};
 /* End XCSwiftPackageProductDependency section */
