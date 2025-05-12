@@ -30,9 +30,21 @@ struct ContentView: View {
         }
         .padding()
         .popover(isPresented: $showPanel) {
-            PanelPopView("demo_panel") { meta in
-                debugPrint(meta)
-            }
+            PanelPopView(
+                "demo_panel",
+                onCloseButtonTapped: {
+                    print("Close button tapped")
+                    showPanel = false
+                },
+                onButtonTapped: { button in
+                    switch button.meta {
+                    case "closebutton":
+                        print("Close button tapped")
+                        showPanel = false
+                    default:
+                        print("Unknown button: \(button)")
+                    }
+                })
         }
     }
 }
@@ -41,7 +53,7 @@ struct ContentPreviewWrapper: View {
     init() {
         PanelPop.initialize("pp1_c60b3357323d5c882525507c5015733a02c5a9d529f10bea3c10627356f9")
     }
-    
+
     var body: some View {
         ContentView()
     }
