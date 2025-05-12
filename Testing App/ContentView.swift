@@ -30,7 +30,9 @@ struct ContentView: View {
         }
         .padding()
         .popover(isPresented: $showPanel) {
-            PanelPopView("demo_panel")
+            PanelPopView("demo_panel") { meta in
+                debugPrint(meta)
+            }
         }
     }
 }
